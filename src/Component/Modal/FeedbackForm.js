@@ -24,7 +24,7 @@ const FeedbackForm = () => {
     console.log(data)
   };
   return (
-    <Form onSubmit={submitHandler}>
+    <Form autoComplete="none" onSubmit={submitHandler}>
       <Form.Group controlId="formBasicEmail">
         <Form.Label>Name</Form.Label>
         <Form.Control
@@ -33,6 +33,7 @@ const FeedbackForm = () => {
           value={name}
           required
           onChange={nameHandler}
+          autoComplete="none"
         />
       </Form.Group>
       <Form.Group controlId="exampleForm.ControlTextarea1">
@@ -42,6 +43,7 @@ const FeedbackForm = () => {
           rows={2}
           value={FeedText}
           onChange={feedHandler}
+          autoComplete="none"
         />
       </Form.Group>
       <Form.Group controlId="formBasicEmail">
@@ -54,6 +56,7 @@ const FeedbackForm = () => {
           required
           value={rate}
           onChange={rateHandler}
+          autoComplete="none"
         />
       </Form.Group>
       <Button variant="primary" type="submit">

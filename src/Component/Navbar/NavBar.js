@@ -4,12 +4,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Modal from "../Modal/modal";
 import NavbarContent from "./NavbarContent";
 import FeedBackModal from "../Modal/FeedBackModal";
+import logo from "../Images/leaf.png";
 
 const NavBar = () => {
   const [showProject, setshowProject] = useState(false);
   const [showDev, setshowDev] = useState(false);
   const [showFeedback, setshowFeedback] = useState(false);
-
   const ModalContent = [
     {
       id: 1,
@@ -48,8 +48,19 @@ const NavBar = () => {
     <div>
       <Navbar bg="success" variant="light">
         <Container>
-
-          <Navbar.Brand>NewLeaf.ai</Navbar.Brand>
+          <Navbar.Brand
+            href="#home"
+            style={{ background: "#F7CD2E", borderRadius: "10px" }}
+          >
+            <img
+              alt=""
+              src={logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{" "}
+            NewLeaf.Ai
+          </Navbar.Brand>
           <Nav className="mr-auto space-around">
             {LinkContent.map((el) => (
               <NavbarContent
@@ -59,7 +70,6 @@ const NavBar = () => {
               />
             ))}
           </Nav>
-          
         </Container>
       </Navbar>
 
