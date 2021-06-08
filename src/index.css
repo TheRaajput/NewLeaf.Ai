@@ -3,6 +3,20 @@
   padding: 0;
   margin: 0;
   outline: none;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background: linear-gradient(#28a745,#F7CD2E);
+}
+::-webkit-scrollbar-thumb{
+  height: 20px;
+  background: red;
+  border-radius: 30px;
+  transition: all ease 0.1s;
 }
 body {
   margin: 0;

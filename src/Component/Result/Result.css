@@ -1,0 +1,13 @@
+.resbackground{
+    background: linear-gradient(#F7CD2E,#28a745);
+    width: 100%;
+    height: 100vh;
+}
+
+.boxes{
+    background-color: rgb(118, 118, 226);
+    border-radius: 30px;
+    height: 300px;
+    width: 100%;
+    margin: 0 auto;
+}
