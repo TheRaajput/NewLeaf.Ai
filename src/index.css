@@ -11,9 +11,10 @@
 }
 ::-webkit-scrollbar-track{
   background: linear-gradient(#28a745,#F7CD2E);
+  background-clip: content-box;
 }
 ::-webkit-scrollbar-thumb{
-  height: 20px;
+  width: 10px;
   background: red;
   border-radius: 30px;
   transition: all ease 0.1s;

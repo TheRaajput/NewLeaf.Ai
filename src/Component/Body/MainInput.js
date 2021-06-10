@@ -2,22 +2,17 @@ import React from "react";
 import { Image, Button, Row, Container, Form } from "react-bootstrap";
 import "./MainInput.css";
 
-
 const MainInput = (props) => {
-
   const fileHandler = (events) => {
     props.onSetImage(events.target.files[0]);
   };
 
   return (
     <div className="background">
-      <Form>
+      <Form onSubmit={props.submitHandler}>
         <Container>
           <Row>
-            <Image
-              src={props.Image}
-              className="inputImg mx-auto mt-5"
-            ></Image>
+            <Image src={props.Image} className="inputImg mx-auto mt-5"></Image>
           </Row>
           <Row>
             <input
@@ -27,7 +22,7 @@ const MainInput = (props) => {
             />
           </Row>
           <Row>
-            <Button className="btn-danger mx-auto mt-5">Submit</Button>
+            <Button type="submit" className="btn-danger mx-auto mt-5">Submit</Button>
           </Row>
         </Container>
       </Form>
